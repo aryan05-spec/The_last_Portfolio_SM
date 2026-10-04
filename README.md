@@ -74,31 +74,6 @@ npm run typecheck  # TypeScript, strict mode, no unused locals/params
 npm run build      # must complete without errors
 ```
 
-Manual checklist:
-1. **Boot:** load the page and watch the sequence. Reload and press `Esc` to skip. Reload again: the boot is skipped. Use *Replay boot sequence* in the footer to see it again.
-2. **Integrity meter:** scroll through the page. The nav meter should climb to 100% and a "fragment recovered" message appears for each section.
-3. **Arsenal:** hover, click or `Tab` through modules. The detail panel updates (inline under the slot on mobile).
-4. **Dossiers:** open a record. Try `←/→`, `Tab` (focus stays inside), and `Esc` (focus returns to the *Open record* button).
-5. **Responsive:** in DevTools, check 1440 / 1280 / 1024 / 768 / 390 px. There should be no horizontal scroll, and the mobile menu should open and close.
-6. **Reduced motion:** in DevTools → Rendering, emulate `prefers-reduced-motion: reduce`. The content should be static and fully readable.
-7. **Console:** no errors.
-
----
-
-## Editing content
-
-Content is kept separate from presentation. Edit these files, and the components update automatically:
-
-| File | Contents |
-|---|---|
-| `src/data/profile.ts` | Name, intro, metadata, evidence strip, field notes, contact links, section list |
-| `src/data/skills.ts` | Arsenal slots and modules |
-| `src/data/projects.ts` | Project records and dossiers |
-| `src/data/buildlog.ts` | Build log entries |
-
-- Set a link to `PLACEHOLDER` and it renders as *link pending* instead of a broken link.
-- Leave an optional project field `undefined` and it renders as *not recovered*.
-
 ## Project structure
 
 ```
